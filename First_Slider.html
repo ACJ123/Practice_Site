@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
 </head>
+
 <body>
 
 <div class="top-container">
@@ -16,7 +17,14 @@
 
 <div class="header" id="myHeader">
   <h2>Challenges</h2>
+  <button>Single</button> <button>Duo</button> <button>Saved</button>
 </div>
+
+
+
+
+
+
 
 <div class="content">
   <h3>On Scroll Sticky Header</h3>
@@ -33,7 +41,7 @@
 </div>
 
 <script>
-window.onscroll = function() {myFunction()};
+    window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
