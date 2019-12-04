@@ -15,12 +15,48 @@
   <p>Scroll down to see the sticky effect.</p>
 </div>
 
+
+
 <div class="header" id="myHeader">
-  <h2>Challenges</h2>
-  <button>Single</button> <button>Duo</button> <button>Saved</button>
+  <h2>Challenges
+  <div class="tab">
+        <button style="float: left;"class="tablinks" onclick="openCity(event, 'Single')">Singe</button>
+        <button style="float: none;"class="tablinks" onclick="openCity(event, 'Duo')">Duo</button>
+        <button style="float: right" class="tablinks" onclick="openCity(event, 'Saved')">Saved</button>
+</div>
+</h2>
+
+</div>
+<div id="Single" class="tabcontent">
+        <h3 style="text-align: center;">Single</h3>
+        <p style="text-align: center;">There are no single challenges.</p>
+</div>
+      
+<div id="Duo" class="tabcontent">
+        <h3 style="text-align: center;">Duo</h3>
+        <p style="text-align: center;">There are no duo challenges.</p>
+</div>
+      
+<div id="Saved" class="tabcontent">
+        <h3 style="text-align: center;">Saved</h3>
+        <p style="text-align: center;">You have no saved Challenges.</p>
 </div>
 
-
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 
 
 
